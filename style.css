@@ -1,12 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppings', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+
 body{
     background: #001e4d;
 }
+
 .app{
     background: #fff;
     width: 90%;
@@ -15,21 +17,73 @@ body{
     border-radius: 10px;
     padding: 30px;
 }
+
 .app h1{
     font-size: 25px;
     color: #001e4d;
     font-weight: 600;
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
+    text-align: center;
 }
-.quiz{
+
+.quiz, .setup-screen, .results{
     padding: 20px 0;
 }
-.quiz h2{
+
+.quiz h2, .setup-screen h2, .results h2{
     font-size: 18px;
     color: #001e4d;
     font-weight: 600;
+    margin-bottom: 15px;
 }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #001e4d;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.start-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    border: 0;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.start-btn:hover {
+    background: #00102a;
+}
+
+#quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #001e4d;
+}
+
 .btn{
     background: #fff;
     color: #222;
@@ -43,14 +97,17 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
+
 .btn:hover:not([disabled]){
     background: #222;
     color: #fff;
 }
+
 .btn:disabled{
     cursor: no-drop;
 }
-#next-btn{
+
+#next-btn, #play-again-btn{
     background: #001e4d;
     color: #fff;
     font-weight: 500;
@@ -62,9 +119,29 @@ body{
     cursor: pointer;
     display: none;
 }
+
+#play-again-btn {
+    display: block;
+}
+
 .correct{
     background: #9aeabc;
 }
+
 .incorrect{
     background: #ff9393;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 15px;
+    color: #001e4d;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #ff0000;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 500;
 }
