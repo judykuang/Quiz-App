@@ -6,16 +6,60 @@
 </head>
 <body>
 <div class="app">
-    <h1>Simple Quiz</h1>
-    <div class="quiz">
+    <h1>Quiz App</h1>
+    
+    <div id="setup-screen" class="setup-screen">
+        <h2>Setup Your Quiz</h2>
+        <div class="form-group">
+            <label for="category-select">Select Category:</label>
+            <select id="category-select">
+                <option value="">Any Category</option>
+                <optgroup label="General Knowledge">
+                    <option value="trivia:9">General Knowledge</option>
+                    <option value="trivia:23">History</option>
+                    <option value="trivia:22">Geography</option>
+                    <option value="trivia:17">Science & Nature</option>
+                    <option value="trivia:19">Mathematics</option>
+                    <option value="trivia:28">Vehicles</option>
+                </optgroup>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="difficulty-select">Select Difficulty:</label>
+            <select id="difficulty-select">
+                <option value="">Any Difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="questions-number">Number of Questions:</label>
+            <input type="number" id="questions-number" min="1" max="20" value="5">
+        </div>
+        
+        <button id="start-btn" class="start-btn">Start Quiz</button>
+        <div id="loading" class="loading-spinner" style="display: none;">Loading questions...</div>
+        <div id="error-message" class="error-message"></div>
+    </div>
+
+    <div id="quiz-screen" class="quiz" style="display: none;">
+        <div id="quiz-header">
+            <span id="question-counter"></span>
+            <span id="score-counter"></span>
+        </div>
         <h2 id="question">Question goes here</h2>
         <div id="answer-buttons">
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
         </div>
         <button id="next-btn">Next</button>
+    </div>
+
+    <div id="results-screen" class="results" style="display: none;">
+        <h2>Quiz Results</h2>
+        <p id="final-score"></p>
+        <button id="play-again-btn">Play Again</button>
     </div>
 </div>
 <script src="script.js"></script>
