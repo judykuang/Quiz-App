@@ -333,3 +333,28 @@ function decodeHTML(html) {
     txt.innerHTML = html;
     return txt.value;
 }
+
+// Modal logic
+const aboutLink = document.getElementById("about-link");
+const aboutModal = document.getElementById("about-modal");
+const closeModal = document.getElementById("close-modal");
+
+aboutLink.addEventListener("click", function (e) {
+  e.preventDefault();
+  aboutModal.style.display = "block";
+});
+
+closeModal.addEventListener("click", function () {
+  aboutModal.style.display = "none";
+});
+
+window.addEventListener("click", function (e) {
+  if (e.target === aboutModal) {
+    aboutModal.style.display = "none";
+  }
+});
+
+// Placeholder resetQuiz function (replace with your actual one)
+function resetQuiz() {
+  location.reload(); // Or implement actual reset logic
+}
