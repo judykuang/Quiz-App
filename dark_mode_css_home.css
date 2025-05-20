@@ -1,0 +1,15 @@
+body.dark-mode {
+    background-color: #1e1e2e;
+    color: #eee;
+  }
+  
+  header, .navbar.dark-mode {
+    background-color: #2a2a40;
+    color: #fff;
+  }
+  
+  button.dark-mode {
+    background-color: #444;
+    color: #fff;
+  }
+  
