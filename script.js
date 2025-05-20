@@ -26,14 +26,20 @@ playAgainBtn.addEventListener("click", resetQuiz);
 
 const triviaCategoryIds = {
     "9": "General Knowledge",
+    "10": "Books",
+    "11": "Films",
+    "14": "Television",
+    "15": "Video Games",  
     "17": "Science & Nature",
     "18": "Computers",
     "19": "Mathematics",
+    "21": "Sports",
     "22": "Geography",
     "23": "History",
-    "24": "Politics",
+    "25": "Art",
+    "26": "Celebrities",
     "27": "Animals",
-    "28": "Vehicles",
+    "31": "Anime & Manga"
 };
 
 // Default example questions for fallback
