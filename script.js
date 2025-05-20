@@ -358,3 +358,27 @@ window.addEventListener("click", function (e) {
 function resetQuiz() {
   location.reload(); // Or implement actual reset logic
 }
+
+const themeToggleBtn = document.getElementById("toggle-theme");
+
+// Apply saved theme on load
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    document.body.classList.add(savedTheme);
+    themeToggleBtn.textContent = savedTheme === "dark-mode" ? "🌞" : "🌙";
+} else {
+    document.body.classList.add("light-mode"); // default
+}
+
+// Toggle theme on click
+themeToggleBtn.addEventListener("click", () => {
+    if (document.body.classList.contains("dark-mode")) {
+        document.body.classList.replace("dark-mode", "light-mode");
+        themeToggleBtn.textContent = "🌙";
+        localStorage.setItem("theme", "light-mode");
+    } else {
+        document.body.classList.replace("light-mode", "dark-mode");
+        themeToggleBtn.textContent = "🌞";
+        localStorage.setItem("theme", "dark-mode");
+    }
+});

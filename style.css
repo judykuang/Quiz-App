@@ -159,6 +159,7 @@ select, input {
   .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
+    padding-right: 20px;
   }
   
   .navbar-links {
@@ -214,5 +215,54 @@ select, input {
   
   .close-button:hover {
     color: #000;
+  }
+  
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --btn-bg: #f0f0f0;
+    --btn-hover: #ddd;
+  }
+  
+  body.light-mode {
+    --bg-color: #b2c8eb;
+    --text-color: #000000;
+    --btn-bg: #f0f0f0;
+    --btn-hover: #ddd;
+  }
+  
+  body.dark-mode {
+    --bg-color: #322357;
+    --text-color: #000000;
+    --btn-bg: #333333;
+    --btn-hover: #444444;
+  }
+  
+  /* Apply theme variables */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button {
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  #theme-toggle {
+    margin-left: auto;
+  }
+  
+  #toggle-theme {
+    font-size: 1.2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
   }
   
